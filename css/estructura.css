@@ -9,8 +9,13 @@ html{
     /* para ver el diseño de la web, útli para depurar*/
     background-color: red;
 }
-/* Contenedor principal
-ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
+
+
+/* Grande, con un ancho de pantalla mayor de 1024px. (monitor)*/
+@media (min-width: 1025px) {
+
+
+/* Contenedor principal ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -47,4 +52,22 @@ ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de
     color: white;
     text-align: center;
     padding: 10px;
+}
+}
+
+/*Mediano, con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
+@media (min-width:769px) and (max-width:1024px){
+
+
+}
+
+/*Normal, con un ancho de pantalla con un máximo de 768px. (tablets verticales)*/
+@media (min-width:481px) and (max-width:768px){
+
+}
+
+/*Compactos, con un ancho de pantalla máximo de 480px. (móviles)*/
+
+@media (max-width:480px){
+    
 }
