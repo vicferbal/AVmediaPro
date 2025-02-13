@@ -1,0 +1,52 @@
+/* Fondo general */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: #e50914;
+}
+
+/* Barras de navegación */
+#barra1, #barra2 {
+    background-color: #1a1a1a;
+}
+
+#barra1 a, #barra2 a {
+    color: white;
+}
+
+#barra1 a:hover, #barra2 a:hover {
+    color: #e50914;
+}
+
+/* Botones */
+button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b20710;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #e50914;
+}
