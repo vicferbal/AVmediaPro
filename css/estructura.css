@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html{
     /* para ver el diseño de la web, útli para depurar*/
     background-color: red;
@@ -24,7 +25,7 @@ ul{
     background-color: #333333;
 }
 
-
+/*Elementos del nav*/
 nav{
     align-items: center;
 }
@@ -44,9 +45,20 @@ li a,i{
 li a:hover{
     background-color: #111111;
 }
+
+
+
+
 /* Grande, con un ancho de pantalla mayor de 1024px. (monitor)*/
 @media (min-width: 1025px) {
 
+/* Carrusel*/
+.carousel {
+    
+    margin: auto; /* Centrar el carrusel */
+    width: 900px; 
+    height: 300px;
+}
 
 /* Contenedor principal ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
 .grid-container {
@@ -79,9 +91,35 @@ li a:hover{
 }
 .main-content {
     grid-area: main-content;
-    background-color: #fff;
+    background-color: #b11111;
     padding: 20px;
+    
 }
+
+/*tamaño para las imaganes en grande*/
+img{
+    width: 202.5px; 
+    height: 270px;
+}
+
+.star{
+    color:rgba(0, 0, 0, 0.473);
+    letter-spacing: -20px;
+    transition: color 0.3s;
+    cursor:pointer
+}
+
+.star:hover{
+    color:gold;
+}
+
+/*poner las targetas uno al lado de otro*/
+section{
+    display: flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
 .footer {
     grid-area: footer;
     background-color: #333;
@@ -90,6 +128,8 @@ li a:hover{
     padding: 10px;
 }
 }
+
+
 
 /*Mediano, con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
 @media (min-width:769px) and (max-width:1024px){
