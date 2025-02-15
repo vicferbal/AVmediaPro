@@ -1,150 +1,73 @@
-/* Se aplica a todos los elementos  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    /* para ver el diseño de la web, útli para depurar*/
-    background-color: red;
-}
-
-header{
-    text-align: left;
-    margin-left: 2vh;
-    color:white;
-
-}
-/*Eliminamos puntos de lista */
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow-y:auto;
-    background-color: #333333;
-}
-
-/*Elementos del nav*/
-nav{
-    align-items: center;
-}
-li,i{
-    float: left;
-
-}
-  
-li a,i{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-  
-li a:hover{
-    background-color: #111111;
-}
-
-
-
-
 /* Grande, con un ancho de pantalla mayor de 1024px. (monitor)*/
 @media (min-width: 1025px) {
 
-/* Carrusel*/
-.carousel {
-    
-    margin: auto; /* Centrar el carrusel */
-    width: 900px; 
-    height: 300px;
-}
+    /*margen de la pagina web*/
+    * {
+        margin: 30px;
+    }
 
-/* Contenedor principal ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
-.grid-container {
-    display: grid;
-    grid-template-areas:
-        "barra1 barra2"
-        "main-content main-content"
-        "footer footer";
-    grid-template-rows: 7vh 1fr auto; /* Altura: encabezado, contenido flexible, pie */
-    grid-template-columns: 3fr 1fr auto ; /*250px 1fr;  /*Ancho: barra lateral fija, contenido flexible */
-    min-height: 100vh;
-    margin-left: 2vh;
-    margin-right: 2vh ;
-}
+    /*----------------------------------HEADER---------------------------------------------*/
+    /*header*/
+    header {
+        background-color: aqua;
+    }
 
-/* Estilo para las áreas */
-#barra1 {
-    grid-area: barra1;
-    list-style-type: none;
-    background-color: #173d91;
-    color: white;
-    text-align: center;
-}
-#barra2 {
-    grid-area: barra2;
-    background-color: #f4f4f4;
-    align-items: right;
-    justify-content: right;
+    /*carrrusel*/
+    .carousel {
+        width: 800px;
+        justify-content: center;
+    }
 
-}
-.main-content {
-    grid-area: main-content;
-    background-color: #b11111;
-    padding: 20px;
-    
-}
+    /* ponemos carrusel y texo del header en linea*/
+    #carruselytexto {
+        display: flex;
+    }
 
-/*tamaño para las imaganes en grande*/
-img{
-    width: 202.5px; 
-    height: 270px;
-}
+    /*ponemos en linea las dos barras*/
+    .dosnav,
+    nav ul {
+        display: flex;
+        background-color: rgb(31, 117, 117);
 
-.star{
-    color:rgba(0, 0, 0, 0.473);
-    letter-spacing: -20px;
-    transition: color 0.3s;
-    cursor:pointer
-}
+    }
 
-.star:hover{
-    color:gold;
-}
-
-/*poner las targetas uno al lado de otro*/
-section{
-    display: flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-}
+    /*texto*/
+    #texto{
+        font-size: 200%;
+    }
 
 
 
-/*Mediano, con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
-@media (min-width:769px) and (max-width:1024px){
+    /*------------------------------------------------MAIN----------------------------------------*/
+    main {
+        background-color: brown;
+    }
+
+    /*targetas*/
+    .card {
+        width: 250px;
+
+    }
+
+    /*Aplico grid para las targetas */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Se ajustan solas */
+        gap: 20px;
+        /* Espacio entre tarjetas */
+        padding: 20px;
+    }
 
 
-}
 
-/*Normal, con un ancho de pantalla con un máximo de 768px. (tablets verticales)*/
-@media (min-width:481px) and (max-width:768px){
 
-}
+    /*Mediano, con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
+    @media (min-width:769px) and (max-width:1024px) {}
 
-/*Compactos, con un ancho de pantalla máximo de 480px. (móviles)*/
+    /*Normal, con un ancho de pantalla con un máximo de 768px. (tablets verticales)*/
+    @media (min-width:481px) and (max-width:768px) {}
 
-@media (max-width:480px){
+    /*Compactos, con un ancho de pantalla máximo de 480px. (móviles)*/
 
-}
-
+    @media (max-width:480px) {}
