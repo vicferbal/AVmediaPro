@@ -50,3 +50,7 @@ footer {
 .footer a:hover {
     color: #e50914;
 }
+
+:root {
+    --background-color: black;
+}
