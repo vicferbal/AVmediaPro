@@ -3,19 +3,30 @@
 
     /*margen de la pagina web*/
     * {
-        margin: 30px;
+        margin: 5px;
+        box-sizing: border-box;
     }
 
     /*----------------------------------HEADER---------------------------------------------*/
     /*header*/
     header {
-        background-color: aqua;
+        background-color: rgb(71, 82, 82);
+    }
+
+    li h1 {
+        font-size: 20px;
     }
 
     /*carrrusel*/
     .carousel {
-        width: 800px;
+        width: 900px;
         justify-content: center;
+        margin-top: -10px;
+    }
+
+    .carousel img {
+        width: 250px;
+        height: 650px;
     }
 
     /* ponemos carrusel y texo del header en linea*/
@@ -23,18 +34,68 @@
         display: flex;
     }
 
+
     /*ponemos en linea las dos barras*/
-    .dosnav,
+    .dosnav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(109, 122, 122);
+        padding: 0;
+        height: 70px;
+        margin: 0;
+
+    }
+
+    /*Quitar los puntos de las listas*/
     nav ul {
         display: flex;
-        background-color: rgb(31, 117, 117);
+        list-style: none;
+    }
+
+    /*poner los elementos de la lista en el centro*/
+    #barra1 li,
+    #barra2 li {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    /*Ajustar los elementos para distintos dispositivos*/
+    #barra1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #barra2 {
+        display: flex;
+        display: right;
+        flex-wrap: wrap;
+        padding: 0;
+        float: right;
+
 
     }
 
     /*texto*/
-    #texto{
-        font-size: 200%;
+    #texto {
+        font-size: 70%;
     }
+
+    /*hover para la lista*/
+    nav a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 27.5px 26px;
+        margin-top: -10px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+        background: rgb(180, 171, 171);
+        color: #333;
+    }
+
 
 
 
@@ -45,19 +106,110 @@
 
     /*targetas*/
     .card {
-        width: 250px;
-
+        max-width: 250px;
+        width: 280px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        object-fit: cover;
     }
+
+    /* Efecto al pasar el mouse */
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* Aumenta la sombra */
+    }
+
+    .card img {
+        width: 200px;
+        height: 280px;
+        display: block;
+        /* Elimina espacios vacíos debajo de la imagen */
+    }
+
 
     /*Aplico grid para las targetas */
     .grid-container {
+        background-color: rgb(29, 145, 145);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* Se ajustan solas */
-        gap: 20px;
-        /* Espacio entre tarjetas */
-        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-column: auto;
+        gap: 1px;
     }
+
+    /* Aplicar sinopsis */
+
+    .synopsis {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 75%;
+        background: rgba(56, 69, 143, 0.8);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* Efectos en la imagen al pasar el mouse */
+    .card:nth-child(1) img {
+        transform: rotateY(0deg);
+    }
+
+    .card:nth-child(1):hover img {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .card:nth-child(2) img {
+        transform: scale(1);
+    }
+
+    .card:nth-child(2):hover img {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .card:nth-child(3)  img {
+        transform: translateX(0);
+    }
+
+    .card:nth-child(3):hover img {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .card:nth-child(4)  img {
+        transform: rotate(0deg);
+    }
+
+    .card:nth-child(4):hover img {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+    .card:nth-child(5) img {
+        transform: translateY(0);
+    }
+
+    .card:nth-child(5):hover  img {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    /* Muestra la sinopsis cuando se pasa el mouse */
+    .card:hover .synopsis {
+        opacity: 0.75;
+        
+    }
+
+
+
+
 
 
 
