@@ -48,3 +48,9 @@ a {
 a:hover {
     color: var(--header-color);
 }
+
+.info-pelicula img {
+    max-width: 25%;  /* Esto ajusta el tamaño de la imagen, puedes cambiar el porcentaje */
+    height: auto;    /* Esto mantiene la proporción de la imagen */
+}
+
