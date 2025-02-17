@@ -1,30 +1,27 @@
+/* Definición de variables */
+:root {
+    --background-color: #121212; /* Fondo general */
+    --header-color: #e50914; /* Color para encabezados */
+    --button-background: #e50914; /* Fondo de botones */
+    --button-hover: #b20710; /* Fondo de los botones al pasar el cursor */
+    --footer-background: #1a1a1a; /* Fondo del footer */
+    --link-color: #cfcfcf; /* Nuevo color para los enlaces */
+}
+
 /* Fondo general */
 body {
-    background-color: #121212;
+    background-color: var(--background-color);
     color: #ffffff;
 }
 
 /* Encabezados */
 h1, h2, h3 {
-    color: #e50914;
-}
-
-/* Barras de navegación */
-#barra1, #barra2 {
-    background-color: #1a1a1a;
-}
-
-#barra1 a, #barra2 a {
-    color: white;
-}
-
-#barra1 a:hover, #barra2 a:hover {
-    color: #e50914;
+    color: var(--header-color);
 }
 
 /* Botones */
 button {
-    background-color: #e50914;
+    background-color: var(--button-background);
     color: white;
     border: none;
     padding: 10px;
@@ -32,25 +29,22 @@ button {
 }
 
 button:hover {
-    background-color: #b20710;
+    background-color: var(--button-hover);
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
+    background-color: var(--footer-background);
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.footer a {
-    color: white;
+/* Enlaces generales */
+a {
+    color: var(--link-color); /* Usando la nueva variable */
 }
 
-.footer a:hover {
-    color: #e50914;
-}
-
-:root {
-    --background-color: black;
+a:hover {
+    color: var(--header-color);
 }
