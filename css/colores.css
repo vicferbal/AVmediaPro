@@ -1,0 +1,50 @@
+/* Definición de variables */
+:root {
+    --background-color: #121212; /* Fondo general */
+    --header-color: #e50914; /* Color para encabezados */
+    --button-background: #e50914; /* Fondo de botones */
+    --button-hover: #b20710; /* Fondo de los botones al pasar el cursor */
+    --footer-background: #1a1a1a; /* Fondo del footer */
+    --link-color: #cfcfcf; /* Nuevo color para los enlaces */
+}
+
+/* Fondo general */
+body {
+    background-color: var(--background-color);
+    color: #ffffff;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: var(--header-color);
+}
+
+/* Botones */
+button {
+    background-color: var(--button-background);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Enlaces generales */
+a {
+    color: var(--link-color); /* Usando la nueva variable */
+}
+
+a:hover {
+    color: var(--header-color);
+}
