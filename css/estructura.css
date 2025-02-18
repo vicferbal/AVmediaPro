@@ -1,4 +1,3 @@
-
 /* Grande, con un ancho de pantalla mayor de 1024px. (monitor)*/
 @media (min-width: 1025px) {
 
@@ -8,73 +7,72 @@
         box-sizing: border-box;
     }
 
-    }
+}
 
 
-    /* mediano con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
-    @media (min-width:769px) and (max-width:1024px) {
-     
-        *{
-            margin: 5px 0px 5px 0px;
-        
-        }
+/* mediano con un ancho de pantalla de hasta 1024px. (tablets en horizontal)*/
+@media (min-width:769px) and (max-width:1024px) {
 
-
-        .perfil {
-            display: none;
-        }
-
-        
-
-
-
-
+    *{
+        margin: 5px 0px 5px 0px;
 
     }
 
-    /*normal con un ancho de pantalla con un máximo de 768px. (tablets verticales)*/
-    @media (min-width:481px) and (max-width:768px) {
-        * {
-            margin: 5px;
-            box-sizing: border-box;
-        }
 
-        #barra1 {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: rgb(71, 82, 82);
-            justify-content: center;
-            z-index: 1000;
-        }/* Mostrar solo Home y Favoritos en barra1 */
+    .perfil {
+        display: none;
+    }
 
-        .delete{
-            display: none;
-        }
-       
 
-         
+
+
+
+
+
+}
+
+/*normal con un ancho de pantalla con un máximo de 768px. (tablets verticales)*/
+@media (min-width:481px) and (max-width:768px) {
+    * {
+        margin: 5px;
+        box-sizing: border-box;
+    }
+
+    #barra1 {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(71, 82, 82);
+        justify-content: center;
+        z-index: 1000;
+    }/* Mostrar solo Home y Favoritos en barra1 */
+
+    .delete{
+        display: none;
+    }
+
+
+
 
     /* Ocultar texto en barra2 */
     #barra2 a span {
         display: none;
     }
 
-       
+
+}
+
+/*Compactos, con un ancho de pantalla máximo de 480px. (móviles)*/
+
+@media (max-width:480px) {
+    .dosnav{
+        display: none ;
+    }
+    #barra1 {
+        display: none;
+    }
+    #barra2 {
+        display: none;
     }
 
-    /*Compactos, con un ancho de pantalla máximo de 480px. (móviles)*/
-
-    @media (max-width:480px) {
-        .dosnav{
-            display: none ;
-        }
-        #barra1 {
-            display: none;
-        }
-        #barra2 {
-            display: none;
-        }
-
-    }
-
+}
